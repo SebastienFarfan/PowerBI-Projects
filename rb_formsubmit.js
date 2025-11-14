@@ -6,26 +6,28 @@
 
    Filename: rb_formsubmit.js
 
-   Purpose: The purpose of this program is to simply report on a
-            successful completition of a valid Web form.
-
-            When the form is submitted, the onsubmit event handler
-            verifies that the form data is complete and valid.
-            An alert box is displayed notifying the user.
-
-            The event function returns a value of false so that the
-            student does not have to continually retype test values
-            in the survey form.
-
+   Purpose: The purpose of this program is to redirect the user to a
+            confirmation page upon form submission, bypassing the
+            default browser validation pop-ups.
 
 */
 
 window.onload = setForm;
 
 function setForm() {
-   document.forms[0].onsubmit = function() {
-      if (this.checkValidity()) alert("Thank yo so much for your submission. We hope you can return very soon!");
-      return false;
+   // Attach an event handler to the form's onsubmit event
+   // We pass 'e' as the event argument to access event methods.
+   document.forms[0].onsubmit = function(e) {
+      
+      // *** THE FIX ***
+      // Stop the default browser action immediately. 
+      // This prevents the native HTML5 validation pop-up from appearing.
+      e.preventDefault();
+      
+      // Now, redirect the user to the desired confirmation page.
+      location.href = "rb_survey_txt.html";
+      
+      // Note: Since we used e.preventDefault(), we no longer need 'return false;'
    }
 }
 
