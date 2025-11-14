@@ -1,30 +1,77 @@
-/*
-   New Perspectives on HTML and CSS, 7th Edition
-   Tutorial 7
-   Tutorial Case
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      New Perspectives on HTML5 and CSS3, 7th Edition
+      Tutorial 7
+      Tutorial Case
 
+      Red Ball Pizza Survey Confirmation
+      Author: Sebastien Farfan
+      Date:   March 31, 2025
 
-   Filename: rb_formsubmit.js
+      Filename:   rb_survey_txt.html
 
-   Purpose: The purpose of this program is to simply report on a
-            successful completition of a valid Web form.
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <title>Survey Confirmation</title>
+   <link href="rb_reset.css" rel="stylesheet" />
+   <link href="rb_styles.css" rel="stylesheet" />
+   <!-- We don't need rb_forms.css on this page -->
+</head>
 
-            When the form is submitted, the onsubmit event handler
-            verifies that the form data is complete and valid.
-            An alert box is displayed notifying the user.
+<body>
+   <header>
+      <img src="rb_logo.png" alt="Red Ball Pizza" id="logoimg" />
+      <nav> <a id="navicon" href="#"><img src="rb_navicon.png" alt="" /></a>
+         <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">menu</a></li>
+            <li><a href="#">directions</a></li>
+            <li><a href="#">coupons</a></li>
+            <li><a href="#">orders</a></li>
+            <li><a href="#">catering</a></li>
+            <li><a href="#">reviews</a></li>
+         </ul>
+      </nav>
+   </header>
+   <section>
+      <h1>Customer Survey</h1>
+      <p>Thank you for choosing Red Ball Pizza. We rely on your feedback to help us
+         deliver the best pizza experience in the world. As a thank you for your participation,
+         you will be entered into a weekly drawing to receive a <em>Red Ball Express PizzaFest</em> containing
+         two large pizzas, a 2-liter soda, and a side
+         order of chicken wings. Check your e-mail inbox for
+         contest results. </p>
+      <p>Surveys are private and confidential. Red Ball
+         Pizza will not share your contact information with third
+         parties, <em>ever</em>. </p>
+      <p>Required values are marked by an asterisk (*)</p>
 
-            The event function returns a value of false so that the
-            student does not have to continually retype test values
-            in the survey form.
+      <h2>Thank You for Your Feedback!</h2>
+      <p>Your survey has been successfully submitted. We appreciate you taking the time to help us improve our service.</p>
+      <p>Click <a href="index.html">here</a> to return to the Red Ball Pizza home page.</p>
 
+   </section>
+   <footer>
+      <h1>ORDER</h1>
+      <a href="#">Specials</a> <a href="#">Pizza</a> <a href="#">Pasta</a> <a href="#">Wings</a> <a href="#">Sides</a> <a href="#">Salads</a> <a href="#">Drinks</a> <a href="#">Desserts</a>
+      <h1>ABOUT US</h1>
+      <a href="#">Our Story</a> <a href="#">Blog</a> <a href="#">Catering</a> <a href="#">School Lunches</a>
+      <h1>CUSTOMER SERVICE</h1>
+      <a href="#">Gluten Free Crusts</a> <a href="#">Contact Us</a> <a href="#">FAQs</a>
+      <h1>MY ACCOUNT</h1>
+      <a href="#">Create an Account</a> <a href="#">Sign In</a> <a href="#">Order Status</a>
+      <h1>NUTRITION</h1>
+      <a href="#">Nutrition Information</a> <a href="#">Food Allergen</a> <a href="#">Gluten Free Pizza</a>
+      <h1>POLICIES</h1>
+      <a href="#">Privacy Policy</a> <a href="#">Terms of Use</a>
+      <address>
+      Red Ball Pizza <br />
+      811 Beach...
+      </address>
+   </footer>
 
-*/
-
-window.onload = setForm;
-
-function setForm() {
-   document.forms[0].onsubmit = function() {
-      if (this.checkValidity()) alert("No invalid data detected. Will retain data for further testing.");
-      return false;
-   }
-}
+</body>
+</html>
