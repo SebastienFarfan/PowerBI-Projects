@@ -15,9 +15,8 @@
 /* HTML and Body styles */
 
 html {
-   background: rgb(246, 174, 176) url(rb_background.png);
-   font-family: Verdana, Geneva, sans-serif;
-   height: 100%;
+   background: rgb(246, 174, 176) url(rb_background.png); /* This is correct! */
+   /* ... other styles */
 }
 
 body {
@@ -191,3 +190,4 @@ footer address {
       flex: 0 1 auto;
    }
 }
+
